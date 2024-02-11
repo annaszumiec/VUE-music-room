@@ -57,8 +57,8 @@
             <text id="/playlist/:id" font-family="LucidaGrande-Bold, Lucida Grande" font-size="20" font-weight="bold" letter-spacing="0.187500007" fill="#BAE732">
                 <tspan x="783" y="348">/playlist/:id</tspan>
             </text>
-            <text id="PlaylistDetailsvue" font-family="LucidaGrande-Bold, Lucida Grande" font-size="16" font-weight="bold" letter-spacing="0.150000006" fill="#FFFFFF">
-                <tspan x="779" y="399">PlaylistDetailsvue</tspan>
+            <text id="PlaylistDetails.vue" font-family="LucidaGrande-Bold, Lucida Grande" font-size="16" font-weight="bold" letter-spacing="0.150000006" fill="#FFFFFF">
+                <tspan x="777" y="399">PlaylistDetails.vue</tspan>
             </text>
             <rect id="Rectangle" fill-opacity="0.395944022" fill="#BAE732" x="955" y="361" width="180" height="62"></rect>
             <text id="/playlist/user" font-family="LucidaGrande-Bold, Lucida Grande" font-size="20" font-weight="bold" letter-spacing="0.187500007" fill="#BAE732">
