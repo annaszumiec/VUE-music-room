@@ -55,6 +55,9 @@
     border: 1px solid  var(--secondary);
     background: #bae73278;
   }
+  input::placeholder{
+    color: #bae73279 ;
+  }
   input, textarea {
     border: 0;
     border-bottom: 1px solid var(--secondary);
@@ -64,6 +67,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 20px auto;
+    background-color:  #35313d;
   }
   
   /* error text */
