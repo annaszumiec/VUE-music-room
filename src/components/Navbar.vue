@@ -6,15 +6,30 @@
       <div class="links">
         <router-link class="btn" :to="{ name: 'signup' }">Sign up </router-link>
         <router-link class="btn" :to="{ name: 'login' }">Log in </router-link>
-        <button>Log out</button>
+        <button @click="handleClick">Log out</button>
       </div>
     </nav>
   </div>
 </template>
 
 <script>
-export default {};
+import { useRouter } from "vue-router";
+import useLogout from "@/composables/useLogout";
+export default {
+  setup() {
+    const { logout } = useLogout();
+    const router = useRouter();
+
+    const handleClick = async () => {
+      await logout();
+      console.log("user logged out");
+      router.push({ name: "login" });
+    };
+    return { handleClick };
+  },
+};
 </script>
+
 
 <style scoped>
 .navbar {

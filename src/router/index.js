@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/Login.vue'
 import Signup from '../views/auth/Signup.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -19,7 +20,6 @@ const routes = [
     name: 'signup',
     component: Signup
   },
-
 
 ]
 
