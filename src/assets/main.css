@@ -6,7 +6,7 @@
 :root {
     --primary: #BAE732;
     --secondary: #35313d;
-    --warning: #effb00;
+    --warning: #fff70d;
   }
   /* base styles  */
   * {
@@ -19,7 +19,7 @@
     color: var(--primary);
   }
   body {
-    background: #343434;
+    background: #2e3637;
   }
   a {
     text-decoration: none;
@@ -54,9 +54,11 @@
     box-shadow: 1px 2px 3px rgba(50,50,50,0.05);
     border: 1px solid  var(--secondary);
     background: #bae73278;
+   
   }
-  input::placeholder{
-    color: #bae73279 ;
+  input::placeholder ,
+  textarea::placeholder{
+    color:#efffbe79 ;
   }
   input, textarea {
     border: 0;
@@ -68,6 +70,7 @@
     box-sizing: border-box;
     margin: 20px auto;
     background-color:  #35313d;
+    color:#efffbef3 ;
   }
   
   /* error text */

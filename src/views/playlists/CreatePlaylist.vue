@@ -61,6 +61,9 @@ export default {
 </script>
 
 <style>
+input::file-selector-button:hover {
+  background: #bae732;
+}
 input::file-selector-button {
   font-weight: bold;
   background: #bae732d5;
@@ -68,11 +71,14 @@ input::file-selector-button {
   padding: 0.5em;
   border: thin solid var(--primary);
   border-radius: 3px;
+  margin-right: 10px;
+  cursor: grab;
 }
 
 input[type="file"] {
   border: 0;
   padding: 0;
+  margin: 10px;
 }
 label {
   font-size: 12px;
