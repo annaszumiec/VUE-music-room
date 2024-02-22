@@ -34,7 +34,7 @@
     cursor: pointer;
     display: inline-block;
   }
-  button:hover, .btn:hover {
+.btn:hover {
     background: var(--primary);
     color: #323722d6;
   }

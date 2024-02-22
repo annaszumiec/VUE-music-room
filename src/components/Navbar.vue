@@ -5,7 +5,10 @@
       <h1><router-link :to="{ name: 'home' }"> musicroom </router-link></h1>
       <div class="links">
         <div v-if="user">
-          <button @click="handleClick">Logout</button>
+          <router-link :to="{ name: 'createPlaylist' }"
+            >Create Playlist</router-link
+          >
+          <button @click="handleClick" class="logout">Logout</button>
         </div>
         <div v-else>
           <router-link class="btn" :to="{ name: 'signup' }"
@@ -60,6 +63,10 @@ nav img {
 nav h1 {
   margin-left: 20px;
 }
+nav h1 :hover {
+  color: #3dfeee;
+  font-size: 28px;
+}
 nav .links {
   margin-left: auto;
 }
@@ -67,5 +74,12 @@ nav .links a,
 button {
   margin-left: 16px;
   font-size: 14px;
+}
+button:hover {
+  background-color: #f13d3d;
+  color: whitesmoke;
+}
+a:hover {
+  color: #3dfeee;
 }
 </style>
