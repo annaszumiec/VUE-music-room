@@ -47,6 +47,7 @@ export default {
       if (file.value) {
         isPending.value = true;
         await uploadImage(file.value);
+
         await addDoc({
           title: title.value,
           description: description.value,
