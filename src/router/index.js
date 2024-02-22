@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/Login.vue'
 import Signup from '../views/auth/Signup.vue'
 import CreatePlaylist from '../views/playlists/CreatePlaylist'
+import PlaylistDetails from '../views/playlists/PlaylistDetails'
 
 
 //rout guard
@@ -16,7 +17,6 @@ const requireAuth = (to, from, next) => {
     next()
   }
 }
-
 
 const routes = [
   {
@@ -40,6 +40,13 @@ const routes = [
     name: 'createPlaylist',
     component: CreatePlaylist,
     beforeEnter: requireAuth
+  },
+  {
+    path: '/playlist/:id',
+    name: 'playlistDetails',
+    component: PlaylistDetails,
+    beforeEnter: requireAuth,
+    props: true,
   },
 
 ]
