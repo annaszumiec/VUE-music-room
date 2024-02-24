@@ -14,7 +14,6 @@ const useCollection = (collection) => {
     try {
       const res = await projectFirestore.collection(collection).add(doc)
       isPending.value = false
-
       return res
     }
     catch (err) {
