@@ -9,6 +9,7 @@
             >Create Playlist</router-link
           >
           <router-link :to="{ name: 'userPlaylist' }">My Playlist</router-link>
+          <span>Hi, {{ user.displayName }}</span>
           <button @click="handleClick" class="logout">Logout</button>
         </div>
         <div v-else>
@@ -81,6 +82,14 @@ button:hover {
   color: whitesmoke;
 }
 a:hover {
+  color: #3dfeee;
+}
+span {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid #eee;
   color: #3dfeee;
 }
 </style>
