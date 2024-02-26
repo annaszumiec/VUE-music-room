@@ -14,7 +14,6 @@ const getCollection = (collection, query) => {
     collectionRef = collectionRef.where(...query)
   }
 
-
   const unsub = collectionRef.onSnapshot(snap => {
     let results = []
     snap.docs.forEach(doc => {
