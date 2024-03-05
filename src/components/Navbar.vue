@@ -90,6 +90,7 @@ span {
   margin-left: 16px;
   padding-left: 16px;
   border-left: 1px solid #eee;
-  color: #3dfeee;
+  font-weight: 600;
+  color: #76fc32;
 }
 </style>

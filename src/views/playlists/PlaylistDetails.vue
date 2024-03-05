@@ -9,22 +9,26 @@
       <h2>{{ playlist.title }}</h2>
       <p class="username">Created by {{ playlist.userName }}</p>
       <p class="description">{{ playlist.description }}</p>
-      <button v-if="ownership" @click="handleDelete">Delete Playlist</button>
+      <button v-if="ownership" @click="handleDelete" class="delete">
+        Delete Playlist
+      </button>
     </div>
 
     <!-- song list -->
     <div class="song-list">
-      <div v-if="!playlist.songs.length">
+      <div v-if="!playlist.songs.length" class="noSongs">
         No songs has been added to this playlis yet
       </div>
 
       <div v-for="song in playlist.songs" :key="song.id" class="single-song">
         <div class="details">
-          <h3>{{ song.title }}</h3>
+          <h4>{{ song.title }}</h4>
           <p>{{ song.artist }}</p>
         </div>
 
-        <button v-if="ownership" @click="handleClick(song.id)">delete</button>
+        <button v-if="ownership" @click="handleClick(song.id)" class="delete">
+          delate
+        </button>
       </div>
       <AddSong v-if="ownership" :playlist="playlist" />
     </div>
@@ -79,6 +83,15 @@ export default {
   grid-template-columns: 1fr 2fr;
   gap: 80px;
 }
+
+h4 {
+  color: #e7f0e6;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.details p {
+  color: #a9ada8;
+}
 .cover {
   overflow: hidden;
   border-radius: 20px;
@@ -104,20 +117,23 @@ export default {
   margin-top: 20px;
 }
 .playlist-info p {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
-.username {
-  color: #999;
-}
+
 .description {
   text-align: left;
 }
 .single-song {
-  padding: 10px 0;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px dashed var(--secondary);
-  margin-bottom: 20px;
+}
+.delete {
+  color: #ff7378;
+  background-color: #2e3637;
+}
+.noSongs {
+  color: #e7f0e6;
 }
 </style>

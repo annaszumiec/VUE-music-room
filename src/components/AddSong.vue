@@ -1,6 +1,8 @@
 <template>
   <div class="add-song">
-    <button v-if="!showForm" @click="showForm = true">Add Songs</button>
+    <button v-if="!showForm" @click="showForm = true" class="add">
+      Add Songs
+    </button>
     <form v-if="showForm" @submit.prevent="handleSubmit">
       <h4>Add a New Song</h4>
       <input type="text" placeholder="Song title" required v-model="title" />
@@ -49,5 +51,9 @@ export default {
 form {
   max-width: 100%;
   text-align: left;
+  color: #e7f0e6;
+}
+.add {
+  background-color: #2e3637;
 }
 </style>
